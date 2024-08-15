@@ -52,7 +52,7 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             margin-top: 8px;
-            font-size: 16px;
+            font-size: 16px;    
         }
 
         .form-group button {
@@ -95,7 +95,7 @@
 
 <div class="register-container">
     <h2>Register</h2>
-    <form class="register-form" action="/res_user" method="post">
+    <form class="register-form" action="{{ route('f_register') }}" method="POST">
         @csrf
         <div class="form-group">
             <label for="username">Name:</label>
@@ -104,7 +104,6 @@
                 <p class="small-text">{{ $message }}</p>
             @enderror
         </div>
-
         <div class="form-group">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" >
@@ -112,7 +111,6 @@
                 <p class="small-text">{{ $message }}</p>
             @enderror
         </div>
-
         <div class="form-group">
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" >
@@ -120,21 +118,17 @@
                 <p class="small-text">{{ $message }}</p>
             @enderror
         </div>
-
         <div class="form-group">
             <label for="password">Confirm Password:</label>
             <input type="password" id="password" name="password_confirmation" >
         </div>
-
         <div class="form-group">
             <button type="submit">Register</button>
         </div>
-
         <div class="form-group login-link">
             <span>Already have an account? </span><a href="/login">Login here</a>
         </div>
     </form>
 </div>
-
 </body>
 </html>

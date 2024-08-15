@@ -93,7 +93,7 @@
     <form class="login-form" action="/loginverify" method="post">
         @csrf
         <div class="form-group">
-            <label for="username">Username:</label>
+            <label for="username">Email:</label>
             <input type="text" id="username" name="email" required>
         </div>
 

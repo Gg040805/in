@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\products;
 use App\http\Controllers\productsController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\loginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,7 @@ use App\Http\Controllers\UserController;
 */
 
 //home
-Route::get("/",[productsController::class,'home']);
+Route::get("/",[productsController::class,'home'])->name('home');
 
 Route::post("/addcart/{product}",[productsController::class,'addcart'])->middleware("auth");
 
@@ -32,17 +33,20 @@ Route::delete("/{id}/cartdelete",[productsController::class,'delete']);
 
 
 //login 
-Route::get("/login",[UserController::class,'login'])->name("login");
+Route::get("/login",[UserController::class,'showLoginForm'])->name("login");
+Route::post("/loginverify", [UserController::class, 'login'])->name("login");
 
-Route::post("/loginverify",[UserController::class,'loginverify']);
+Route::get('/register', [UserController::class, 'create'])->name('register');
 
-Route::get("/register",[UserController::class,'register']);
+Route::post("/register", [UserController::class, 'register'])->name('f_register');
 
-Route::post("/res_user",[UserController::class,'res_user']);
+Route::get('/verifyOtp', [UserController::class, 'mark'])->name('otp.verify');
+
+Route::post('/verifyOtp', [UserController::class, 'verifyOtp'])->name('otp.verify.post');
+
+Route::post("/resend-otp", [UserController::class, 'resendOtp'])->name('otp.resend');
 
 Route::post("/logout",[UserController::class,'destroy']);
-
-
 
 
 

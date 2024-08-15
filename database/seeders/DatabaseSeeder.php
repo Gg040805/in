@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        products::create([
+        /*products::create([
             "id"=>1,
             "p_name"=>"carrot",
             "p_desc"=>"Carrot is a biennial, belonging to the family Apiaceae, and is an important vegetable for its fleshy edible, colorful roots",
@@ -84,6 +84,6 @@ class DatabaseSeeder extends Seeder
         ]);
         cart_id::create([
             'cart_id'=>0,
-        ]);
+        ]);*/
     }
 }

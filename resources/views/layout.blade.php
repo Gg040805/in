@@ -53,6 +53,9 @@
             <li class="nav-item">
               <a class="nav-link" href="contact.html">CONTACT US</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="register">Register</a>
+            </li>
             @auth
                 <li class="nav-item">
                   <form action="/logout" method="POST">
