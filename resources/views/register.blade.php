@@ -101,6 +101,8 @@
             <label for="username">Name:</label>
             <input type="text" id="username" name="name" >
             @error('name')
+            <p class="small-text">{{ $message }}</p>
+            <strong>{{ $message }}</strong>
                 <p class="small-text">{{ $message }}</p>
             @enderror
         </div>
