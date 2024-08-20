@@ -65,9 +65,10 @@
             cursor: pointer;
             font-size: 1rem;
             text-decoration: none;
-            display: inline-block;
-            margin-top: 20px;
+            display: block; /* Block display for the box effect */
+            text-align: center; /* Center text */
             transition: background-color 0.3s; /* Smooth transition */
+            margin: 20px 0; /* Margin around the button */
         }
         .btn:hover {
             background-color: #2980b9; /* Darker shade on hover */
@@ -89,6 +90,9 @@
         }
         .alert.fade-out {
             opacity: 0;
+        }
+        .button-container {
+            text-align: right; /* Align buttons to the right */
         }
     </style>
 </head>
@@ -125,8 +129,28 @@
             </div>
 
             <div class="form-group">
-                <label for="address">Address:</label>
-                <input type="text" id="address" name="address" value="{{ old('address', $user->address) }}">
+                <label for="address1">Address Line 1:</label>
+                <input type="text" id="address1" name="address1" value="{{ old('address1', $user->address1) }}">
+            </div>
+
+            <div class="form-group">
+                <label for="address2">Address Line 2:</label>
+                <input type="text" id="address2" name="address2" value="{{ old('address2', $user->address2) }}">
+            </div>
+
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" value="{{ old('city', $user->city) }}">
+            </div>
+
+            <div class="form-group">
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" value="{{ old('state', $user->state) }}">
+            </div>
+
+            <div class="form-group">
+                <label for="postcode">Postcode:</label>
+                <input type="text" id="postcode" name="postcode" value="{{ old('postcode', $user->postcode) }}">
             </div>
 
             <div class="form-group">
@@ -141,6 +165,10 @@
 
             <button type="submit" class="btn">Update Profile</button>
         </form>
+
+        <div class="button-container">
+            <a href="/address" class="btn">Add Address</a>
+        </div>
     </div>
 
     <!-- Optional JavaScript for alert fade-out effect -->

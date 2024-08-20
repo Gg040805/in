@@ -107,7 +107,8 @@
         </div>
 
         <div class="form-group forgot-password">
-            <span>Not Sign up yet?<a href="/register">Click here</a></span>
+            <span>Not Sign up yet?<a href="/register">Click here</a></span><br><br>
+            <span>Or forget password?<a href="/password_reset">Click here</a></span>
         </div>
     </form>
 </div>

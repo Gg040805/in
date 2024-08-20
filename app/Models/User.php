@@ -22,7 +22,8 @@ class User extends Authenticatable
         'email',
         'password',
         'otp',
-        'is_verified'
+        'is_verified',
+        'otp_created_at',
     ];
 
     /**
@@ -43,5 +44,6 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
+        'otp_created_at' => 'datetime',
     ];
 }
