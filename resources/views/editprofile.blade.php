@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <title>Edit Profile</title>
     <style>
         body {
@@ -127,49 +128,13 @@
                 <label for="email">Email:</label>
                 <input type="text" id="email" name="email" value="{{ old('email', $user->email) }}" required>
             </div>
-
-            <div class="form-group">
-                <label for="address1">Address Line 1:</label>
-                <input type="text" id="address1" name="address1" value="{{ old('address1', $user->address1) }}">
-            </div>
-
-            <div class="form-group">
-                <label for="address2">Address Line 2:</label>
-                <input type="text" id="address2" name="address2" value="{{ old('address2', $user->address2) }}">
-            </div>
-
-            <div class="form-group">
-                <label for="city">City:</label>
-                <input type="text" id="city" name="city" value="{{ old('city', $user->city) }}">
-            </div>
-
-            <div class="form-group">
-                <label for="state">State:</label>
-                <input type="text" id="state" name="state" value="{{ old('state', $user->state) }}">
-            </div>
-
-            <div class="form-group">
-                <label for="postcode">Postcode:</label>
-                <input type="text" id="postcode" name="postcode" value="{{ old('postcode', $user->postcode) }}">
-            </div>
-
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Leave blank to keep current password">
-            </div>
-
-            <div class="form-group">
-                <label for="password_confirmation">Confirm Password:</label>
-                <input type="password" id="password_confirmation" name="password_confirmation">
-            </div>
-
             <button type="submit" class="btn">Update Profile</button>
+            <a href="{{ route('home') }}" class="btn">Back to Main Page</a>
         </form>
-
-        <div class="button-container">
-            <a href="/address" class="btn">Add Address</a>
-        </div>
     </div>
+    
+        
+   
 
     <!-- Optional JavaScript for alert fade-out effect -->
     <script>

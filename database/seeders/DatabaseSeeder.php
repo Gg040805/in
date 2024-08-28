@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        /*products::create([
+        products::create([
             "id"=>1,
             "p_name"=>"carrot",
             "p_desc"=>"Carrot is a biennial, belonging to the family Apiaceae, and is an important vegetable for its fleshy edible, colorful roots",
@@ -82,8 +82,8 @@ class DatabaseSeeder extends Seeder
             "p_desc"=>"A leafy green vegetable commonly used in salads and sandwiches. There are several varieties, such as iceberg, romaine, and butterhead, each with a slightly different texture and flavor. Lettuce is low in calories but high in water content and vitamins A and K.",
             "p_price"=>"3.50",
         ]);
-        cart_id::create([
-            'cart_id'=>0,
-        ]);*/
+        // cart_id::create([
+        //     'cart_id'=>0,
+        // ]);
     }
 }

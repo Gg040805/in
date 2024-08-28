@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <title>Login Form</title>
     <style>
         body {
@@ -108,7 +109,8 @@
 
         <div class="form-group forgot-password">
             <span>Not Sign up yet?<a href="/register">Click here</a></span><br><br>
-            <span>Or forget password?<a href="/password_reset">Click here</a></span>
+            <span>Or forget password?<a href="{{ route('forgot-password') }}">Forgot Your Password?</a>
+            </span>
         </div>
     </form>
 </div>

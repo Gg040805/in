@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <title>Address Form</title>
     <style>
         body {
@@ -52,16 +53,33 @@
             color: #fff;
             font-size: 16px;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
         .form-group button:hover {
             background-color: #0056b3;
+        }
+        .btn-container {
+            margin-top: 15px;
+            text-align: center;
+        }
+        .btn-container a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-container a:hover {
+            background-color: #218838;
         }
     </style>
 </head>
 <body>
     <div class="form-container">
         <h1>Address Form</h1>
-        <form action="{{ route('address.store') }}" method="post">
+        <form action="{{ route('addresses.store') }}" method="POST">
             @csrf
             <div class="form-group">
                 <label for="address1">Address Line 1:</label>
@@ -69,7 +87,7 @@
             </div>
             <div class="form-group">
                 <label for="address2">Address Line 2 (Optional):</label>
-                <input type="text" id="address2" name="address2">
+                <input type="text" id="address2" name="address2" required>
             </div>
             <div class="form-group">
                 <label for="postcode">Postcode:</label>
